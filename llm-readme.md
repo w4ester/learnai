@@ -54,7 +54,7 @@ Ollama runs AI models locally on the user's machine.
 
 **After Ollama is running, pull a model:**
 ```
-ollama pull gemma3:4b
+ollama pull gemma4:e4b
 ```
 This downloads a small, fast model (~2.5 GB). It will take a few minutes depending on internet speed. Any model from https://ollama.com/library works.
 
@@ -66,7 +66,7 @@ Docker runs the LearnAI platform (database, API server, web interface) in contai
 
 **Mac:**
 - Option A: Docker Desktop from https://www.docker.com/products/docker-desktop/
-- Option B (recommended for Mac): OrbStack from https://orbstack.dev/ (lighter, faster, Mac-only)
+- After install, open Docker Desktop once to finish setup
 - After install, open the app once to finish setup
 - Verify: `docker --version` should print a version number
 
@@ -162,7 +162,7 @@ Provide this information ONLY when the user reports a specific error. Do not pre
 - Restart the API container: `docker compose restart api`
 
 ### "Cannot connect to Docker daemon"
-- Is Docker Desktop / OrbStack running? Open the app.
+- Is Docker Desktop running? Open the app.
 - On Linux: `sudo systemctl start docker`
 - On Linux: did you add yourself to the docker group? `groups` should show `docker`
 

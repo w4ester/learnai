@@ -283,7 +283,7 @@ Ask: "Do you want to connect your Ollama install to LearnAI so you can use it in
 
 If yes, check prerequisites:
 
-1. **Docker:** Ask "Do you have Docker Desktop or OrbStack installed?" If not, they need one. OrbStack is lighter and Mac only (orbstack.dev). Docker Desktop is universal (docker.com). Both are free for personal use. Recommend OrbStack for Macs.
+1. **Docker:** Ask "Do you have Docker Desktop installed?" If not, they need it. Download from docker.com. Free for personal use.
 
 2. **Git:** Run `git --version` in Terminal. If it says command not found, install it: `brew install git` (Option B users) or it comes with the Xcode Command Line Tools (macOS will prompt to install them).
 
@@ -334,7 +334,7 @@ The model is too big for their hardware. Go back to Stage 4 and help them pick a
 Out of memory during inference. The model loaded but could not complete a response. Same fix: smaller model.
 
 ### Docker containers cannot see Ollama
-On Mac with Docker Desktop or OrbStack, `host.docker.internal:11434` should work out of the box. Verify Ollama is reachable from the host: `curl http://localhost:11434` should return "Ollama is running". If yes, restart the Docker containers: `docker compose restart api`.
+On Mac with Docker Desktop, `host.docker.internal:11434` should work out of the box. Verify Ollama is reachable from the host: `curl http://localhost:11434` should return "Ollama is running". If yes, restart the Docker containers: `docker compose restart api`.
 
 ### Mac fan is loud, battery drains fast
 Normal when running large models. The model uses the CPU and GPU heavily. Either pick a smaller model or only run Ollama when plugged in.

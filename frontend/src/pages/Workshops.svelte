@@ -53,7 +53,7 @@
             <div class="outcome"><div class="dot"></div>Curl: curl -fsSL https://ollama.com/install.sh | sh</div>
             <div class="outcome"><div class="dot"></div>Verify: curl http://localhost:11434 shows Ollama is running</div>
             <div class="outcome"><div class="dot"></div>Pull a model: ollama pull (pick any model from ollama.com/library)</div>
-            <div class="outcome"><div class="dot"></div>Install Docker Desktop or OrbStack</div>
+            <div class="outcome"><div class="dot"></div>Install Docker Desktop (docker.com)</div>
             <div class="outcome"><div class="dot"></div>Clone repo, cp .env.example .env, docker compose up --build</div>
             <div class="outcome"><div class="dot"></div>Open localhost:9180. Your models appear in the dropdown.</div>
           </div>

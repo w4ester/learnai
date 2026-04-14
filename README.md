@@ -4,7 +4,7 @@ Learn AI by building with it. A self-hosted platform for running local AI models
 
 ## Prerequisites
 
-- **Docker** — [Docker Desktop](https://www.docker.com/products/docker-desktop/) or [OrbStack](https://orbstack.dev/) (Mac)
+- **Docker** — [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - **Ollama** — [ollama.com](https://ollama.com/) — pull at least one model: `ollama pull gemma3:4b`
 
 ## Quick Start
