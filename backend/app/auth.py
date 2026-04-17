@@ -17,9 +17,9 @@ def get_db():
         db.close()
 
 def _dev_user(db: Session) -> User:
-    u = db.query(User).filter(User.email == "dev@learnai.local").first()
+    u = db.query(User).filter(User.email == "dev@learnai.dev").first()
     if not u:
-        u = User(email="dev@learnai.local")
+        u = User(email="dev@learnai.dev")
         db.add(u); db.commit()
     return u
 

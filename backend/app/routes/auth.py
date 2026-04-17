@@ -23,9 +23,9 @@ def register(body: AuthRegisterRequest, db: Session = Depends(get_db)):
 def login(body: AuthLoginRequest, db: Session = Depends(get_db)):
     if settings.auth_mode == "noauth":
         # Return dev tokenless user for FE compat
-        u = db.query(User).filter(User.email=="dev@learnai.local").first()
+        u = db.query(User).filter(User.email=="dev@learnai.dev").first()
         if not u:
-            u = User(email="dev@learnai.local")
+            u = User(email="dev@learnai.dev")
             db.add(u); db.commit()
         token = create_jwt(u.id)
         return {"token": token, "user": {"id": u.id, "email": u.email, "role": u.role}}
@@ -39,9 +39,9 @@ def login(body: AuthLoginRequest, db: Session = Depends(get_db)):
 def me(db: Session = Depends(get_db)):
     # in noauth mode, return dev user without requiring a token
     if settings.auth_mode == "noauth":
-        u = db.query(User).filter(User.email=="dev@learnai.local").first()
+        u = db.query(User).filter(User.email=="dev@learnai.dev").first()
         if not u:
-            u = User(email="dev@learnai.local")
+            u = User(email="dev@learnai.dev")
             db.add(u); db.commit()
         return {"id": u.id, "email": u.email, "role": u.role}
     from ..auth import current_user as cu
